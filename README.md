@@ -75,6 +75,27 @@ These weren't from a tutorial — they came up while loading actual government f
 
 ---
 
+## Python / Pandas Analysis
+
+Beyond the SQL and Power BI layers, the collection-rate analysis is reproduced in 
+**Python (Pandas)** on the full ~398K-row fact table, pulled directly from MySQL via 
+`read_sql` — demonstrating the same analysis in a second toolset and cross-validating 
+the results.
+
+**Data quality work:** validating on the full dataset surfaced **342 claims (0.09%)** 
+where `allowed` or `paid` exceeded `billed` — logically impossible in a revenue-cycle 
+context. Inspection traced these to under-recorded billed amounts; they were excluded 
+with a documented filter (keeping 99.91% of the data) to prevent inflated 
+payment-to-charge ratios.
+
+**Result:** office claims show a ~33% payment-to-charge ratio vs ~20% for facility 
+claims. The Pandas figures agree with the equivalent SQL `GROUP BY` query, validating 
+the analysis across both tools.
+
+See `medicare_rcm_analysis_final.ipynb`.
+
+---
+
 ## Dashboard
 
 A two-page Power BI report connected live to the MySQL star schema, with DAX measures (`SUMX` for billed/paid totals, `COUNTROWS` for claims, `DIVIDE` for the collection rate).
