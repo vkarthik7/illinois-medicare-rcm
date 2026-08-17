@@ -113,18 +113,21 @@ A two-page Power BI report connected live to the MySQL star schema, with DAX mea
 ## Repository structure
 
 ```
-.
+
 ├── README.md
 ├── LICENSE
 ├── sql/
-│   ├── 01_data_loading.sql        # staging tables + LOAD DATA + sanity checks
-│   ├── 02_data_cleaning.sql       # build & populate the star schema
+│   ├── 01_data_loading.sql          # staging tables + LOAD DATA + sanity checks
+│   ├── 02_data_cleaning.sql         # build & populate the star schema
 │   └── 03_exploratory_data_analysis.sql   # 5 analytical queries
+├── python/
+│   └── medicare_rcm_analysis_final_analysis_pandas.ipynb   # Python/Pandas analysis
 ├── powerbi/
 │   └── Illinois_medicare_rcm_dashboard.pbix
 └── assets/
     ├── dashboard_1.png
     └── dashboard_2.png
+
 ```
 
 ---
