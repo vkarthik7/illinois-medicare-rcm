@@ -93,7 +93,7 @@ payment-to-charge ratios.
 claims. The Pandas figures agree with the equivalent SQL `GROUP BY` query, validating 
 the analysis across both tools.
 
-See `medicare_rcm_analysis_final_analysis_pandas.ipynb`.
+See [`python/medicare_rcm_analysis_final_analysis_pandas.ipynb`](python/medicare_rcm_analysis_final_analysis_pandas.ipynb).
 
 ---
 
