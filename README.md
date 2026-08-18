@@ -114,9 +114,9 @@ A two-page Power BI report connected live to the MySQL star schema, with DAX mea
 ## Repository structure
 
 ```
-
 ├── README.md
 ├── LICENSE
+├── requirements.txt
 ├── sql/
 │   ├── 01_data_loading.sql          # staging tables + LOAD DATA + sanity checks
 │   ├── 02_data_cleaning.sql         # build & populate the star schema
