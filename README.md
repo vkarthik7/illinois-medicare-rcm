@@ -141,11 +141,13 @@ A two-page Power BI report connected live to the MySQL star schema, with DAX mea
 - Power BI Desktop
 - MySQL Connector/NET (required for Power BI's live MySQL connection)
 - The three CMS source files (see *Data sources* above) downloaded locally
+- Python 3.9+ with the packages in `requirements.txt` (`pip install -r requirements.txt`)
 
 **Steps**
 
 1. **Database:** run `sql/01_data_loading.sql` (edit the `LOAD DATA` paths first), then `02_data_cleaning.sql`, then `03_exploratory_data_analysis.sql`.
 2. **Dashboard:** open the `.pbix` in Power BI Desktop and point the MySQL connection at your `healthcare_db` (server `localhost`, MySQL Connector/NET).
+3. **Python analysis:** open the notebook in `python/` and update the SQLAlchemy connection string to point at your `healthcare_db`. Requires the star schema from step 1 to already exist.
 
 ---
 
