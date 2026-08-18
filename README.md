@@ -12,7 +12,7 @@ An end-to-end data engineering and analytics project built on **real, public CMS
 - Solving genuine **ETL problems**: encoding mismatches, fixed-width parsing, currency-string cleaning, and connector restrictions
 - Writing analytical SQL with **window functions and chained CTEs** to answer revenue-cycle business questions
 - Building a connected, two-page **Power BI dashboard** with DAX measures over a live MySQL connection
-- - Validating results in **Python (Pandas)** against SQL on the full 398K-row table, surfacing and documenting a data-quality defect invisible in sampled exports
+- Validating results in **Python (Pandas)** against SQL on the full 398K-row table, surfacing and documenting a data-quality defect invisible in sampled exports
 
 ---
 
